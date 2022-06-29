@@ -4,14 +4,14 @@ import { Component, EventEmitter, Output, Input } from '@angular/core';
   //parent component here exchange data from one child to the other
   selector: 'my-app',
   template: `<app-send-input (inputValue)="addItem($event)"> </app-send-input>
-    <app-show-list [showStrings]="someValue"> </app-show-list>
+    <app-show-list [showStrings]="stringValue"> </app-show-list>
   `,
 })
 export class AppComponent {
-  someValue = [];
+  stringValue = [];
   addItem(incomingValue: string) {
     // push string to the items array
-    this.someValue.push(incomingValue);
+    this.stringValue.push(incomingValue);
   }
 }
 
